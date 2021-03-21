@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+
+  letter-spacing: 0.1em;
+
+  color: $color-gray;
+
+  font-family: $font-main;
+  font-size: $font-size;
+}
+
+h1 {
+  text-align: center;
+  letter-spacing: 0.08em;
+
+  font-family: $font-header;
+  font-weight: 300;
+  line-height: 1.2em;
+
+  @include lg-min {
+    font-size: 3.75rem;
+  };
+  @include lg-md {
+    font-size: 2.5rem;
+  };
+  @include md {
+    font-size: 1.875rem;
+  };
+}
+/* поменять размер fs -rem*/
+h2 {
+  display: none;
+
+  @include lg-min {
+    font-size: 2rem;
+  }
+
+  @include lg-md {
+    font-size: 1.5rem;
+  }
+
+  @include md {
+    font-size: 1.4rem;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  color: $color-light;
+}
+
+// .btn-accent,
+.btn {
+  display: block;
+
+  transition: background-color 0.5s;
+  text-align: center;
+  letter-spacing: 0.1em;
+
+  border: 2px solid $color-light;
+  background-color: rgba($color-light, 0.1);
+
+  @include lg-min {
+    min-width: 250px;
+    height: 60px;
+    padding: 18px $gap;
+
+    font-size: 1.125rem;
+  }
+  @include lg-md {
+    min-width: 200px;
+    height: 50px;
+    padding: 14px $gap;
+  }
+  @include md {
+    min-width: 170px;
+    height: 40px;
+    padding: 10px $gap;
+  }
+}
+
+.btn-accent:focus,
+.btn-accent:hover,
+.btn:focus,
+.btn:hover {
+  background-color: $color-accent;
+}

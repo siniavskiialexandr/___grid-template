@@ -1,0 +1,32 @@
+.header-content {
+  z-index: 1;
+
+  width: 100%;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__title {
+    margin: 0 0 53px;
+  }
+
+  &__battons {
+    display: flex;
+    justify-content: center;
+
+    @include sm {
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .btn:first-of-type {
+      @include sm-min {
+        margin-right: $gap;
+      }
+      @include sm {
+        margin-bottom: $gap;
+      }
+    }
+  }
+}
