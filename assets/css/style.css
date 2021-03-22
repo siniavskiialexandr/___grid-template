@@ -502,7 +502,6 @@ a {
   color: #ffffff;
 }
 
-.btn-accent,
 .btn {
   display: block;
   -webkit-transition: background-color 0.5s;
@@ -519,6 +518,11 @@ a {
 .btn:focus,
 .btn:hover {
   background-color: #d66926;
+}
+
+.btn--primary {
+  border-color: #2d3651;
+  background-color: rgba(45, 54, 81, 0.8);
 }
 
 .header {
@@ -709,6 +713,7 @@ a {
 .skill-item__title {
   z-index: 2;
   margin: 0;
+  letter-spacing: 0.1em;
   position: absolute;
   top: 0;
   right: 0;
@@ -726,14 +731,11 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
   height: 100%;
   padding: 20px;
   -webkit-transition: color 0.5s;
   -o-transition: color 0.5s;
   transition: color 0.5s;
-  letter-spacing: 0.1em;
-  font-size: 1.25rem;
 }
 
 .skill-item__image {
@@ -762,7 +764,7 @@ a {
 }
 
 .skill-item:hover .skill-item__link {
-  color: #d53d27;
+  color: #d66926;
 }
 
 .skill-item:nth-of-type(1) {
@@ -802,6 +804,17 @@ a {
 }
 
 @media (min-width: 576px) {
+  .skills__actions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .skills__actions .btn--primary {
+    min-width: 350px;
+  }
   .header-content__battons .btn:first-of-type {
     margin-right: 20px;
   }
@@ -826,6 +839,9 @@ a {
     padding: 0;
     list-style: none;
   }
+  .skill-item__title {
+    font-size: 1.25rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -835,7 +851,6 @@ a {
   h2 {
     font-size: 2rem;
   }
-  .btn-accent,
   .btn {
     min-width: 250px;
     height: 60px;
@@ -856,7 +871,6 @@ a {
   h2 {
     font-size: 1.5rem;
   }
-  .btn-accent,
   .btn {
     min-width: 200px;
     height: 50px;
@@ -876,7 +890,6 @@ a {
   h2 {
     font-size: 1.4rem;
   }
-  .btn-accent,
   .btn {
     min-width: 170px;
     height: 40px;
@@ -896,6 +909,9 @@ a {
     text-align: right;
     background: rgba(68, 89, 110, 0.9);
   }
+  .skill-item__title {
+    font-size: 1.125rem;
+  }
 }
 
 @media (max-width: 767.8px) and (min-width: 576px) {
@@ -907,6 +923,9 @@ a {
 }
 
 @media (max-width: 575.8px) {
+  .skills__actions .btn--primary {
+    width: 100%;
+  }
   .header-content__battons {
     -webkit-box-align: center;
         -ms-flex-align: center;

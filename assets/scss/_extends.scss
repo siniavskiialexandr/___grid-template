@@ -1,7 +1,22 @@
 %container {
-  max-width: 1340px;
+  max-width: $ul;
   margin: auto;
   padding-right: $gap;
   padding-left: $gap;
 }
 
+%btn-container {
+  @include sm-min {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn--primary {
+    @include sm-min {
+      min-width: 350px;
+    }
+    @include sm {
+      width: 100%;
+    }
+  }
+}
